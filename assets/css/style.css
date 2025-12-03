@@ -11212,4 +11212,171 @@ textarea.form-control-lg {
   transform: translate(-50%, -50%);
 }
 
+/* Fondo general del modal */
+#habilidadesModal .modal-content,
+#habilidadesTecnicasModal .modal-content,
+#nivelModal .modal-content {
+  background: rgba(25, 0, 40, 0.55);
+  backdrop-filter: blur(15px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  color: #eee;
+  box-shadow: 0 0 25px rgba(140, 0, 255, 0.4);
+}
+
+/* Borde degradado morado brillante */
+#habilidadesModal .modal-content::before,
+#habilidadesTecnicasModal .modal-content::before,
+#nivelModal .modal-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #b300ff, #7a00ff, #d400ff);
+  -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Header */
+#habilidadesModal .modal-header,
+#habilidadesTecnicasModal .modal-header,
+#nivelModal .modal-header {
+  border-bottom: none;
+  background: transparent;
+}
+
+/* Título con estilo futurista */
+#habilidadesModal .modal-title,
+#habilidadesTecnicasModal .modal-title,
+#nivelModal .modal-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #d57bff, #b300ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Cerrar botón */
+#habilidadesModal .btn-close,
+#habilidadesTecnicasModal .btn-close,
+#nivelModal .btn-close {
+  filter: invert(1) brightness(5);
+  opacity: .8;
+}
+
+#habilidadesModal .btn-close:hover,
+#habilidadesTecnicasModal .btn-close:hover,
+#nivelModal .btn-close:hover {
+  opacity: 1;
+}
+
+/* Lista */
+#habilidadesModal .modal-body ul,
+#habilidadesTecnicasModal .modal-body ul,
+#nivelModal .modal-body ul {
+  list-style: none;
+  padding: 0;
+}
+
+#habilidadesModal .modal-body li,
+#habilidadesTecnicasModal .modal-body li,
+#nivelModal .modal-body li {
+  margin: 12px 0;
+  padding-left: 20px;
+  position: relative;
+  font-size: 1.05rem;
+}
+
+/* Bullets morados animados */
+#habilidadesModal .modal-body li::before,
+#habilidadesTecnicasModal .modal-body li::before,
+#nivelModal .modal-body li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffb3ff, #b300ff);
+  box-shadow: 0 0 10px #b300ff;
+  animation: pulseBullet 2s infinite ease-in-out;
+}
+
+@keyframes pulseBullet {
+  0% { transform: scale(1); box-shadow: 0 0 8px #b300ff; }
+  50% { transform: scale(1.25); box-shadow: 0 0 14px #e281ff; }
+  100% { transform: scale(1); box-shadow: 0 0 8px #b300ff; }
+}
+
+/* Footer */
+#habilidadesModal .modal-footer,
+#habilidadesTecnicasModal .modal-footer,
+#nivelModal .modal-footer {
+  border-top: none;
+  background: transparent;
+}
+
+/* Botón estilo morado neon suave */
+#habilidadesModal .btn-secondary,
+#habilidadesTecnicasModal .btn-secondary,
+#nivelModal .btn-secondary {
+  background: linear-gradient(135deg, #6a00ff, #b300ff);
+  border: none;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: 0.25s ease;
+  box-shadow: 0 0 10px rgba(179, 0, 255, 0.4);
+}
+
+#habilidadesModal .btn-secondary:hover,
+#habilidadesTecnicasModal .btn-secondary:hover,
+#nivelModal .btn-secondary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 16px rgba(205, 140, 255, 0.7);
+}
+/* Estilos base del enlace-botón */
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 60px;
+  background: linear-gradient(135deg, #6a00ff, #b300ff);
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 0 12px rgba(179, 0, 255, 0.4);
+  border: none;
+}
+
+/* Animación de hover */
+.contact-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(200, 100, 255, 0.7);
+  color: #fff;
+}
+
+/* Animación del ícono */
+.contact-btn i {
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover i {
+  transform: translateX(5px);
+}
+
+
 /*# sourceMappingURL=style.css.map */
